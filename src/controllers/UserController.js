@@ -75,7 +75,7 @@ res.status(201).json({Messange: "Usúario Criado com sucesso"});
 // update-atualizar um usuario
 // junçao do store com o show 
     update:(req,res)=>{
-    const {id}= req.params
+    const {id}= req.params;
     // store const com o nome
     const {nome, sobrenome, email,idade}=req.body;
     // show
@@ -113,8 +113,6 @@ delete:(req,res)=>{
    .json({message: "Usuario deletado com sucesso"});
     
 },
-
-
 
 save:(req,res)=>{
     const {id,name}= req.params;
