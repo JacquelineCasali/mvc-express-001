@@ -1,7 +1,23 @@
 <%- include("./partials/head.ejs") %>
 
     <main>
-        <h1>Products</h1>
+        <h1>Produtos</h1>
+<% if(produtos.length>0){%>
+  
+<!-- produtos é a variavel que esta no controller -->
+
+<% for (let produto of produtos){ %>
+    <div>
+<h2><%= produto.nome %></h2>
+<span><%= produto.preco %></span>
+ <p><%= produto.descricao %></p>
+    </div>
+<% }%>
+<%} else { %>
+    <h1>Nenhum Produto encontrado</h1>
+   <% }%>  
+
+ 
     </main>
    
    
